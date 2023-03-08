@@ -63,6 +63,15 @@
         "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
     },
     {
+        "title": "Easter Fun",
+        "startDay": 7,
+        "endDay": 9,
+        "month": 4,
+        "year": 2023,
+        "image": "easter.jpg",
+        "description": "Solve riddles and follow the clues to get a prize at the end of our Easter egg scavenger hunt! Stop by the petting zoo to meet our bunnies and the Easter bunny as well!"
+    },
+    {
         "title": "Freebie Friday",
         "startDay": 5,
         "endDay": 5,
