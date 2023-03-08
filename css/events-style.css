@@ -1,0 +1,260 @@
+body {
+    background: hsl(35, 23%, 50%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h1 {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2em,3vw);
+    color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2.5vw, 2em);
+    color: hsl(125, 34%, 25%);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1.5em);
+    font-weight: bold;
+    color: hsl(125, 34%, 25%);
+    margin-top: .5em;
+    margin-block-end: 0px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#nav-bar {
+    height: 5.5em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: clamp(3em, 7vw + 1em, 5.5em);
+    padding: 0% 2%;
+    background-color: hsl(120, 12%, 32%);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+#logo {
+    max-height: 4.5rem;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    display: inline-block;
+    padding: 0 2em;
+    text-decoration: none;
+}
+
+li a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1.5em);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    position: relative;
+    aspect-ratio: 3 / 1;
+    min-height: 5em;
+    overflow: hidden;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.banner-image {
+    width: 100%;
+    position: absolute;
+    top: -15vw;
+}
+
+.banner-text {
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1em 1em;
+    z-index: 5;
+    position: absolute;
+    align-self: center;
+    font-size: max(5vw, 1vw);
+}
+
+#events {
+    width: 80%;
+    margin: 3em 10%;
+}
+
+.month {
+    text-align: left;
+    margin-top: 2em;
+}
+
+.event-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+    border-radius: 1vw;
+    overflow: hidden;
+    height: 30vw;
+    max-height: 200px;
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    width: 100%;
+    grid-column: 1 / span 1;
+    overflow: hidden;
+}
+
+.event-image {
+    height: 100%;
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.event-info {
+    grid-area: 1 / 2 / span 1 / span 1;
+    justify-self: left;
+    padding: 0vw 2vw ;
+    margin-top: 1em;
+}
+
+footer {
+    position: absolute;
+    right: 3em;
+    padding-bottom: .1em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1em);
+    color: white;
+
+}
+
+@media (max-width: 718px) {
+    h1 {
+        font-size: max(1em,3vw);
+    }
+    
+    h2 {
+        font-size: max(2.5vw, 1em);
+    }
+
+    li {
+        padding: 0 1em;
+    }
+
+    li a {
+        font-size: max(2vw, 1em);
+    }
+
+    #logo {
+        height: 9.5vw;
+    }
+}
+
+@media (max-width: 590px) {
+    li {
+        padding-left: 0em;
+    }
+    li a {
+        font-size: max(2.6vw, .8em);
+    }
+    #nav-bar {
+        padding-right: 0%;
+    }
+
+    .nav-links {
+        position: relative;
+        flex-direction: column;
+        display: none;
+        width: 8em;
+        height: 100vh;
+        align-self: start;
+        background-color: rgba(54, 68, 54, 0.837);
+        margin: 0px;
+        right: -9em;
+        padding-inline-start: 1em;
+        transition: right 300ms ease-out;
+    }
+
+    .nav-item {
+        padding: .5em 0%;
+        justify-self: left;
+        opacity: 1;
+    }
+
+    #nav-1 {
+        margin-top: 2.4em;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        background-image: url('../resources/images/hamburger-menu.png');
+        background-color: transparent;
+        background-size: 3em;
+        background-repeat: no-repeat;
+        width: 3em;
+        aspect-ratio: 1;
+        border: none;
+        z-index: 200;
+        top: .5em;
+        right: .5em;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 430px) {
+    h1 {
+        font-size: max(.8em,3.8vw);
+    }
+    
+    h2 {
+        font-size: 3.7vw;
+    }
+
+    .event-info {
+        margin-top: 2vw;
+    }
+    
+}
+
+@media (hover: hover) {
+    .nav-item:hover {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+}

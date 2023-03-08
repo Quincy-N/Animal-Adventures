@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animal Adventures</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/home-style.css" type="text/css" rel="stylesheet">
+    <script src="./scripts/media.js" defer></script>
+    <script src="./scripts/navigation.js" defer></script>
+    <script>
+      onIndex = true;
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <nav id="nav-bar">
+        <a href="./index.html"><img id="logo" src="./resources/images/logo.png"/></a>
+        <ul id="primary-nav" class="nav-links">
+          <li id="nav-1" class="nav-item"><a href="./pages/tickets.html">VISIT US</a></li>
+          <li id="nav-2" class="nav-item"><a href="./pages/animals.html">THE ANIMALS</a></li>
+          <li id="nav-3" class="nav-item"><a href="./pages/events.html">EVENTS</a></li>
+        </ul>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="menu" active="false"></button>
+      </nav>
+    </header>
+    <div id="top">
+      <div class="videos-container" slideshow="false">
+        <div id="vid-1">
+          <div class="fader"></div>
+          <video autoplay playsinline muted loop src="./resources/videos/Ape - 8216.mp4" type="video/mp4">Video could not load.</video>
+        </div>
+        <div id="vid-2">
+          <video autoplay playsinline muted loop src="./resources/videos/Water Dragon - 3779.mp4" type="video/mp4">Video could not load.</video>
+        </div>
+        <div id="vid-3">
+          <video autoplay playsinline muted loop src="./resources/videos/Zebra - 44236.mp4" type="video/mp4">Video could not load.</video>
+        </div>
+      </div>
+      <h2>Join us on our next adventure to experience<br><span>THE ANIMAL KINGDOM</span><br>like never before!</h2>
+      
+    </div>
+    <div class="images-container">
+      <div id="gator">
+        <img class="grid-image" src="./resources/images/gator.jpg" />
+      </div>
+      <div id="goal">
+        <div id="goal-text">
+          <h3><span>UNFORGETTABLE ENCOUNTERS</span><br>At Animal Adventures, our goal is to help people truly connect with the animal kingdom in a way that is both safe and exciting!</h3>
+        </div>
+        <div id="button-container"><button id="tickets-button"><a href="./pages/tickets.html">Get tickets</a></button></div> 
+      </div>
+      <div class="images-navs">
+        <button class="image-nav-left"></button>
+        <button class="image-nav-right"></button>
+      </div>
+      <div id="bird" class="active">
+        <img class="grid-image" src="./resources/images/bird.jpg" />
+      </div>
+      <div id="kangaroo">
+        <img class="grid-image" src="./resources/images/kangaroo.jpg" />
+      </div>
+      <div id="llama">
+        <img class="grid-image" src="./resources/images/llama.jpg" />
+      </div>
+      <div id="squirrel">
+        <img class="grid-image" src="./resources/images/squirrel.jpg" />
+      </div>
+    </div>
+    <footer>
+      <h4 id="copyright">© Animal Adventures</h4>
+    </footer>
+  </body>
+</html>

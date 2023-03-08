@@ -1,0 +1,568 @@
+body {
+    background: hsl(125, 34%, 25%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h2 {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2em,3vw);
+    color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 span {
+    font-size: min(5vw, 2.5em);
+}
+
+span {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(3vw, 2em);
+    font-weight: bold;
+}
+
+h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2.5vw, 1.5em);
+    color: hsl(125, 34%, 25%);
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#tickets-button {
+    font-size: max(3vw, 1em);
+    background-color: hsl(35, 23%, 50%);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    padding: 1vw 15px;
+    cursor: pointer;
+    margin: 0 auto;
+    max-height: 5em;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#button-container {
+    display: flex;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#nav-bar {
+    height: 5.5em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: clamp(3em, 7vw + 1em, 5.5em);
+    padding: 0% 2%;
+    background-color: hsl(120, 12%, 32%);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+#logo {
+    max-height: 4.5rem;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    display: inline-block;
+    padding: 0 2em;
+    text-decoration: none;
+}
+
+li a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1.5em);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+#top {
+    background: linear-gradient(0deg, hsl(125, 34%, 25%) 0%, hsl(105, 48%, 46%) 100%);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#top h2 {
+    padding-top: 20px;
+}
+
+.videos-container {
+    display: grid;
+    box-sizing: border-box;
+    width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1em solid tan;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fader {
+    width: 100%;
+    height: calc(100% + 1px);
+    box-sizing: border-box;
+    background-color: black;
+    grid-column: 1 / 2;
+    z-index: 10;
+    opacity: 0;
+    transition: 500ms opacity linear;
+}
+
+#vid-1 {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    aspect-ratio: 1920 / 1080;
+}
+
+.fader, #vid-1 video {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+#vid-2 {
+    grid-column: 2 / 3;
+    aspect-ratio: 1920 / 1080;
+}
+
+#vid-3 {
+    grid-column: 3 / 4;
+    aspect-ratio: 1920 / 1080;
+}
+
+.images-container {
+    display: grid;
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 1.5 / 1.09;
+    max-height: 1600px;
+    grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 1.5em;
+    margin: 40px auto;
+    padding: 2%;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+    background-color: white;
+}
+
+.images-navs {
+    display: none;
+}
+
+.grid-image {
+    position: absolute;
+    aspect-ratio: 3 / 2;
+}
+
+#gator {
+    grid-area: 1 / 1 / span 3 / span 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1.5em;
+}
+
+#gator img {
+    width: 150%;
+    aspect-ratio: 2 / 3;
+}
+
+#goal {
+    grid-area: 1 / 2 / span 1 / span 2;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 5% 0 5%;
+}
+
+#goal-text h3 {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#bird {
+    grid-area: 2 / 2 / span 1 / span 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5em;
+}
+
+#bird img {
+    width: 100%;
+    border-radius: 1.5em;
+}
+
+#kangaroo {
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5em;
+    width: 100%;
+}
+
+#kangaroo img {
+    width: 100%;
+    border-radius: 1.5em;
+}
+
+#llama {
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5em;
+    width: 100%;
+}
+
+#llama img {
+    width: 100%;
+    border-radius: 1.5em;
+}
+
+#squirrel {
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5em;
+    width: 100%;
+}
+
+#squirrel img {
+    width: 100%;
+    border-radius: 1.5em;
+}
+
+footer {
+    position: absolute;
+    right: 3em;
+    padding-bottom: .1em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1em);
+    color: white;
+
+}
+
+@media (max-width: 718px) {
+    h2 {
+        font-size: max(1em,3vw);
+    }
+    
+    h3 {
+        font-size: max(2.5vw, 1em);
+    }
+    
+    h3 span {
+        font-size: 4vw;
+    }
+
+    li {
+        padding: 0 1em;
+    }
+
+    li a {
+        font-size: max(2vw, 1em);
+    }
+
+    #logo {
+        height: 9.5vw;
+    }
+
+    .videos-container {
+        grid-template-columns: 1fr;
+    }
+
+    #vid-2 {
+        display: none;
+    }
+
+    #vid-3 {
+        display: none;
+    }
+
+    .images-container {
+        grid-template-rows: 150px repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2vw;
+        aspect-ratio: 1 / 1.32;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .images-navs {
+        display: none;
+    }
+
+    #goal {
+        grid-area: 1 / 1 / span 1 / span 2;
+        padding: 0 15% 0 15%;
+    }
+    
+    #bird {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    #kangaroo {
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+
+    #gator {
+        grid-area: 3 / 1 / span 1 / span 2;
+    }
+
+    #gator img {
+        width: 100%;
+        position: absolute;
+        top: -35vw;
+        
+    }
+
+    #llama {
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+
+    #squirrel {
+        grid-area: 4 / 2 / span 1 / span 1;
+    }
+}
+
+@media (max-width: 590px) {
+    li {
+        padding-left: 0em;
+    }
+    li a {
+        font-size: max(2.6vw, .8em);
+    }
+    #nav-bar {
+        padding-right: 0%;
+    }
+
+    .nav-links {
+        position: relative;
+        flex-direction: column;
+        display: none;
+        width: 8em;
+        height: 100vh;
+        align-self: start;
+        background-color: rgba(54, 68, 54, 0.837);
+        margin: 0px;
+        right: -9em;
+        padding-inline-start: 1em;
+        transition: right 300ms ease-out;
+    }
+
+    .nav-item {
+        padding: .5em 0%;
+        justify-self: left;
+        opacity: 1;
+    }
+
+    #nav-1 {
+        margin-top: 2.4em;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        background-image: url('../resources/images/hamburger-menu.png');
+        background-color: transparent;
+        background-size: 3em;
+        background-repeat: no-repeat;
+        width: 3em;
+        aspect-ratio: 1;
+        border: none;
+        z-index: 200;
+        top: .5em;
+        right: .5em;
+        cursor: pointer;
+    }
+
+    #goal {
+        padding: 0 10% 0 10%;
+    }
+}
+
+@media (max-width: 430px) {
+    h2 {
+        font-size: max(.8em,3.8vw);
+    }
+    
+    h3 {
+        font-size: .9em;
+    }
+    
+    h3 span {
+        font-size: 1.1em;
+    }
+    
+    .images-container {
+        display: block;
+        position: relative;
+        aspect-ratio: 1 / 1.32;
+        width: 100%;
+        padding: 0;
+    }
+
+    #goal {
+        padding: 0 10% 0 10%;
+    }
+
+    #bird {
+        position: absolute;
+        display: inline-block;
+        border-radius: 0;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        transition: transform 250ms linear;
+    }
+
+    #bird .grid-image {
+        border-radius: 0;
+    }
+
+    .images-navs {
+        display: block;
+        position: relative;
+        margin: 0;
+        height: 10vw;
+    }
+
+    .image-nav-left {
+        display: none;
+        z-index: 10;
+        position: absolute;
+        background-image: url('../resources/images/chevron-left.png');
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+        width: 10vw;
+        height: 10vw;
+        align-self: center;
+        left: .5em;
+        top: 50%;
+        opacity: .7;
+        transition: opacity 250ms linear, transform 250ms linear;
+        cursor: pointer;
+    }
+
+    .image-nav-right {
+        display: none;
+        z-index: 10;
+        position: absolute;
+        background-image: url('../resources/images/chevron-right.png');
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: none;
+        width: 10vw;
+        height: 10vw;
+        align-self: center;
+        right: .5em;
+        top: 50%;
+        opacity: .7;
+        transition: opacity 250ms linear, transform 250ms linear;
+        cursor: pointer;
+    }
+
+    #kangaroo {
+        position: absolute;
+        display: inline-block;
+        border-radius: 0;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        transition: transform 250ms linear;
+    }
+
+    #kangaroo img {
+        border-radius: 0;
+    }
+
+    #gator {
+        display: none;
+    }
+
+    #llama {
+        position: absolute;
+        display: inline-block;
+        border-radius: 0;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        transition: transform 250ms linear;
+    }
+
+    #llama .grid-image {
+        border-radius: 0;
+    }
+
+    #squirrel {
+        position: absolute;
+        display: inline-block;
+        border-radius: 0;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        transition: transform 250ms linear;
+    }
+
+    #squirrel .grid-image {
+        border-radius: 0;
+    }
+}
+
+@media (hover: hover) {
+    .nav-item:hover {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+
+    .image-nav-left:hover {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+
+    .image-nav-right:hover {
+        opacity: 1;
+        transform: scale(1.1, 1.1);
+    }
+}

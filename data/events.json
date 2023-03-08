@@ -1,0 +1,137 @@
+[
+    {
+        "title": "Live Christmas Music",
+        "startDay": 20,
+        "endDay": 24,
+        "month": 12,
+        "year": 2022,
+        "image": "christmas-music.jpg",
+        "description": "Various musicians perform Christmas music throughout the day."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 6,
+        "endDay": 6,
+        "month": 1,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Valentine's Day Giveaway",
+        "startDay": 1,
+        "endDay": 8,
+        "month": 2,
+        "year": 2023,
+        "image": "valentines-giveaway.jpg",
+        "description": "Every ticket purchased by visitors counts as an entry in our giveaway! Prizes include gift cards and staycation experiences."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 3,
+        "endDay": 3,
+        "month": 2,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 3,
+        "endDay": 3,
+        "month": 3,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "St. Patrick's Day",
+        "startDay": 17,
+        "endDay": 17,
+        "month": 3,
+        "year": 2023,
+        "image": "st-patricks-day.jpg",
+        "description": "Wear green when you visit to get a discount at our restaurants and the gift shop!"
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 7,
+        "endDay": 7,
+        "month": 4,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 5,
+        "endDay": 5,
+        "month": 5,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 2,
+        "endDay": 2,
+        "month": 6,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 7,
+        "endDay": 7,
+        "month": 7,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 4,
+        "endDay": 4,
+        "month": 8,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 1,
+        "endDay": 1,
+        "month": 9,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 6,
+        "endDay": 6,
+        "month": 10,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 3,
+        "endDay": 3,
+        "month": 11,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    },
+    {
+        "title": "Freebie Friday",
+        "startDay": 1,
+        "endDay": 1,
+        "month": 12,
+        "year": 2023,
+        "image": "freebie-friday.jpg",
+        "description": "On the first friday of each month, all our restaurants offer one item on the menu for free."
+    }
+]

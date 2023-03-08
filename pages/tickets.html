@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animal Adventures</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/tickets-style.css" type="text/css" rel="stylesheet">
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/ticketCheckout.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+        <nav id="nav-bar">
+            <a href="../index.html"><img id="logo" src="../resources/images/logo.png"/></a>
+            <ul id="primary-nav" class="nav-links">
+            <li id="nav-1" class="nav-item"><a href="./tickets.html">VISIT US</a></li>
+            <li id="nav-2" class="nav-item"><a href="./animals.html">THE ANIMALS</a></li>
+            <li id="nav-3" class="nav-item"><a href="./events.html">EVENTS</a></li>
+            </ul>
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="menu" active="false"></button>
+        </nav>
+    </header>
+    <div class="banner">
+        <img class="banner-image" src="../resources/images/visiting-group.jpg" />
+        <h1 class="banner-text">ADVENTURES AWAIT!</h1>
+    </div>
+    <section class="get-tickets">
+        <form>
+            <h2 class="section-header">Admission Prices</h2>
+            <div class="ticket-column">
+                <h2>Kids'<br>Admission</h2>
+                <h3 class="price">$12.00</h3>
+                <div class="buttons-container">
+                    <button class="decrease" type="button">-</button>
+                    <input type="number" aria-label="kid ticket amount" class="ticket-amount" value="0" max="99"></input>
+                    <button class="increase" type="button">+</button>
+                </div>    
+            </div>
+            <div class="ticket-column">
+                <h2>Adults'<br>Admission</h2>
+                <h3 class="price">$15.00</h3>
+                <div class="buttons-container">
+                    <button class="decrease" type="button">-</button>
+                    <input type="number" aria-label="adult ticket amount" class="ticket-amount" value="0" max="99"></input>
+                    <button class="increase" type="button">+</button>
+                </div>    
+            </div>
+            <div class="ticket-column">
+                <h2>Seniors'<br>Admission</h2>
+                <h3 class="price">$10.00</h3>
+                <div class="buttons-container">
+                    <button class="decrease" type="button">-</button>
+                    <input type="number" aria-label="senior ticket amount" class="ticket-amount" value="0" max="99"></input>
+                    <button class="increase" type="button">+</button>
+                </div>    
+            </div>
+            <button id="checkout">Checkout</button>
+        </form>
+    </section>
+    <dialog class="modal">
+        <button class="modal-exit"></button>
+        <h2 class="modal-top">Thank you for visiting our site!</h2>
+        <p class="modal-message">Due to construction, Animal Adventures is currently closed. We hope to see you as soon as we are open again!</p>
+    </dialog>
+    <footer>
+        <h4 id="copyright">© Animal Adventures</h4>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+body {
+    background: hsl(125, 34%, 25%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+h2 {
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2em,3vw);
+    color: hsl(119, 82%, 13%);
+    margin-top: 0;
+    margin-block-end: 0;
+}
+
+h3 {
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(4vw, 3em);
+    color: hsl(125, 34%, 25%);
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1.2em);
+    font-weight: bold;
+    color: hsl(125, 34%, 25%);
+}
+
+.buttons-container {
+    display: flex;
+    height: min(6vw, 3em);
+    justify-content: center;
+    align-content: stretch;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.get-tickets button {
+    display: inline-block;
+    background-color: hsl(35, 23%, 50%);
+    color: white;
+    border: none;
+    padding: min(1vw, .05em) 2vw 0vw 2vw;
+    cursor: pointer;
+    margin: 0;
+    font-size: min(4vw, 2em);
+}
+
+.increase {
+    border-radius: 0px 20px 20px 0px;
+    height: 100%;
+}
+
+.decrease {
+    border-radius: 20px 0px 0px 20px;
+    height: 100%;
+}
+
+.ticket-amount {
+    background-color: hsla(35, 23%, 50%, 0.695);
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(4vw, 2em);
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+    border: none;
+    border-radius: 0;
+    width: 40%;
+    height: 100%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#nav-bar {
+    height: 5.5em;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: clamp(3em, 7vw + 1em, 5.5em);
+    padding: 0% 2%;
+    background-color: hsl(120, 12%, 32%);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+#logo {
+    max-height: 4.5rem;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    display: inline-block;
+    padding: 0 2em;
+    text-decoration: none;
+}
+
+li a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1.5em);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    position: relative;
+    aspect-ratio: 3 / 1;
+    min-height: 5em;
+    overflow: hidden;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.banner-image {
+    width: 100%;
+    position: absolute;
+    top: -15vw;
+}
+
+.banner-text {
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1em 1em;
+    z-index: 5;
+    position: absolute;
+    align-self: center;
+    font-size: max(5vw, 1vw);
+}
+
+.get-tickets form {
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    padding: 6vw 10%;
+    gap: .5em;
+    background-color: white;
+}
+
+.section-header {
+    grid-area: 1 / 1 / span 1 / span 3;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ticket-column {
+    width: 100%;
+    grid-row: 2 / span 1;
+    text-align: center;
+}
+
+.price {
+    display: block;
+}
+
+#checkout {
+    display: block;
+    background-color: hsl(120, 12%, 32%);
+    grid-area: 3 / 2 / span 1 / span 1;
+    margin-top: 3em;
+    height: min(6vw, 3em);
+    border-radius: .2em;
+    font-size: min(3vw, 1.5em);
+}
+
+.modal {
+    width: 50%;
+    background-color: white;
+    border: solid min(2vw, 1em) hsl(120, 12%, 32%);
+}
+
+.modal::backdrop {
+    background: hsla(0, 0%, 0%, 0.4);
+}
+
+.modal-top {
+    margin-right: 1em;
+}
+
+.modal-exit {
+    position: absolute;
+    background-image: url("../resources/images/x-modal.png");
+    background-color: transparent;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    width: 2em;
+    aspect-ratio: 1;
+    border: none;
+    z-index: 200;
+    top: .2em;
+    right: .2em;
+    cursor: pointer;
+    outline: none;
+}
+
+footer {
+    position: absolute;
+    right: 3em;
+    padding-bottom: .1em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: min(2vw, 1em);
+    color: white;
+
+}
+
+@media (max-width: 718px) {
+    h2 {
+        font-size: max(1em,3vw);
+    }
+    
+    h3 {
+        font-size: 4vw;
+    }
+
+    li {
+        padding: 0 1em;
+    }
+
+    li a {
+        font-size: max(2vw, 1em);
+    }
+
+    #logo {
+        height: 9.5vw;
+    }
+}
+
+@media (max-width: 590px) {
+    li {
+        padding-left: 0em;
+    }
+
+    li a {
+        font-size: max(2.6vw, .8em);
+    }
+
+    p {
+        font-size: .7em;
+    }
+
+    #nav-bar {
+        padding-right: 0%;
+    }
+
+    .nav-links {
+        position: relative;
+        flex-direction: column;
+        display: none;
+        width: 8em;
+        height: 100vh;
+        align-self: start;
+        background-color: rgba(54, 68, 54, 0.837);
+        margin: 0px;
+        right: -9em;
+        padding-inline-start: 1em;
+        transition: right 300ms ease-out;
+    }
+
+    .nav-item {
+        padding: .5em 0%;
+        justify-self: left;
+        opacity: 1;
+    }
+
+    #nav-1 {
+        margin-top: 2.4em;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        background-image: url('../resources/images/hamburger-menu.png');
+        background-color: transparent;
+        background-size: 3em;
+        background-repeat: no-repeat;
+        width: 3em;
+        aspect-ratio: 1;
+        border: none;
+        z-index: 200;
+        top: .5em;
+        right: .5em;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 430px) {
+    h2 {
+        font-size: max(.8em,3.8vw);
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+}
+
+@media (hover: hover) {
+    .nav-item:hover {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+}
