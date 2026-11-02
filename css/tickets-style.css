@@ -38,6 +38,10 @@ p {
     margin: 0 10%;
 }
 
+button:hover {
+    opacity: .8;
+}
+
 .get-tickets button {
     display: inline-block;
     background-color: hsl(35, 23%, 50%);

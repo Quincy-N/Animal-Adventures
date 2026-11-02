@@ -50,6 +50,10 @@ video {
     max-height: 5em;
 }
 
+#tickets-button:hover {
+    background-color: hsl(36, 23%, 39%);
+}
+
 button a {
     text-decoration: none;
     color: inherit;
