@@ -38,6 +38,9 @@ const getEvents = async () => {
                     return true;
                 }
             })
+            if (nextEvents.length > 1) {
+                nextEvents.sort((event1, event2) => event1.startDay - event2.startDay);
+            }
             return [currentEvents, nextEvents];
         }
     }
